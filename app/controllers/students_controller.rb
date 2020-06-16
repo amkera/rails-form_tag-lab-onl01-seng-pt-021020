@@ -17,11 +17,11 @@ class StudentsController < ApplicationController
     #byebug
   end
 
-  private
+  def set_student
+    @student = Student.find_by(id: params[:id])
+  end 
 
-    def set_student
-      @student = Student.find(params[:id])
-    end
+
 end
 
 
